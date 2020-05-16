@@ -15,8 +15,8 @@
 <script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
 <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>-->
-<script type="text/javascript" src="<?php echo base_url(libraries/sheetjs/xlsx.full.min.js);?>"></script>
-<script type="text/javascript" src="<?php echo base_url(libraries/filesaver/dist/filesaver.min.js);?>"></script>
+<script type="text/javascript" src="<?php echo base_url('libraries/sheetjs/xlsx.full.min.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('libraries/filesaver/dist/filesaver.min.js');?>"></script>
 
 <!-- cdn end -->
     <!--<link href="<?php //echo base_url();?>cssfiles/css/sb-admin-2.min.css" rel="stylesheet">-->
@@ -228,11 +228,11 @@ $(document).ready(function() {
         $(this).next().empty();
     });
     // toggle columns start
-    $('.toggle-vis').on( 'click', function (e) {
+    //$('.toggle-vis').on( 'click', function (e) {
         //e.preventDefault();
-        var column = table.column( $(this).attr('data-column') );
-        column.visible( ! column.visible() );
-    } );
+    //    var column = table.column( $(this).attr('data-column') );
+    //    column.visible( ! column.visible() );
+    //} );
     // toggle columns end
 
 
@@ -633,7 +633,6 @@ $("#button-a").click(function(){
             var array = []
 
             // get each column data
-            var column1 = tableRow.children[0].textContent
             var column2 = tableRow.children[1].textContent
             var column3 = tableRow.children[2].textContent
             var column4 = tableRow.children[3].textContent
@@ -658,7 +657,7 @@ $("#button-a").click(function(){
             // check if row already exist in list
             if(list.length > 0) {
                 var duplicate = list.findIndex((value) => {
-                    var id = value[0]
+                    var id = value[1]
                     if(id == column2) {
                         return true
                     } 
@@ -668,12 +667,12 @@ $("#button-a").click(function(){
                 if(duplicate > -1) {
                     list.splice(duplicate, 1)
                 }else {
-                    array.push(column1, column2, column3, column4, column5, column6, column7, column8, column9, column10, column11, column12, column13, column14, column15, column16, column17, column18, column19, column20)
+                    array.push(column2, column3, column4, column5, column6, column7, column8, column9, column10, column11, column12, column13, column14, column15, column16, column17, column18, column19, column20)
                     list.push(array)
                 }
 
             }else {
-                array.push(column1, column2, column3, column4, column5, column6, column7, column8, column9, column10, column11, column12, column13, column14, column15, column16, column17, column18, column19, column20)
+                array.push(column2, column3, column4, column5, column6, column7, column8, column9, column10, column11, column12, column13, column14, column15, column16, column17, column18, column19, column20)
                 list.push(array)
             }
 
