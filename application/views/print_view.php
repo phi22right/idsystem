@@ -657,7 +657,7 @@ $("#button-a").click(function(){
             // check if row already exist in list
             if(list.length > 0) {
                 var duplicate = list.findIndex((value) => {
-                    var id = value[1]
+                    var id = value[0]
                     if(id == column2) {
                         return true
                     } 
