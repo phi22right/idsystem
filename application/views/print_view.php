@@ -15,8 +15,8 @@
 <script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
 <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>-->
-<script type="text/javascript" src="<?php echo base_url('libraries/sheetjs/dist/xlsx.full.min.js');?>"></script>
-<script type="text/javascript" src="<?php echo base_url('libraries/FileSaver/dist/FileSaver.min.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/sheetjs/dist/xlsx.full.min.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/FileSaver/dist/FileSaver.min.js');?>"></script>
 
 <!-- cdn end -->
     <!--<link href="<?php //echo base_url();?>cssfiles/css/sb-admin-2.min.css" rel="stylesheet">-->
